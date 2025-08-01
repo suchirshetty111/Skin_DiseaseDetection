@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Skin Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+            <h1>🌟 AI-Powered Skin Disease Detection</h1>
+            <p>Upload an image to receive an instant analysis.</p>
+        </header>
+
+        <section class="upload-section">
+            <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="file-upload" required>
+                <button type="submit" class="glow-button">🔍 Analyze Image</button>
+            </form>
+        </section>
+
+        <section class="find-dermatologist">
+            <h2>Find a Dermatologist 💼</h2>
+            <p>Search for expert dermatologists near you.</p>
+            <div class="search-container">
+                <input type="text" id="location" placeholder="Enter city or ZIP code">
+                <button onclick='searchDermatologist()' class="glow-button">🔎 Search</button>
+            </div>
+            <div id="results"></div>
+        </section>
+
+        <footer>
+            <p>© 2025 Skin Disease Detection | AI Healthcare</p>
+        </footer>
+    </div>
+
+    <script>
+        function searchDermatologist(){
+            let location = document.getElementById("location").value.trim();
+            if (location) {
+                window.open(`https://www.google.com/search?q=dermatologist+near+${location}`);
+            } else {
+                alert("Please enter a location!");
+            }
+        }
+    </script>
+</body>
+</html>

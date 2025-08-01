@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Skin Disease Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}"> 
+</head>
+<body>
+
+    <div class="container">
+        <div class="result-box">
+            <p class="result-text">Predicted Disease:</p>
+            <p class="predicted-disease">
+                {{ label }}
+            </p>
+        </div>
+
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='uploads/' + image_url) }}"
+                 alt="Uploaded Image" class="uploaded-image">
+        </div>
+
+        <div class="precautions">
+            <h2>🛡 Precautions & Safety Measures</h2>
+            <ul>
+                <li>🧼 Keep the affected area **clean and dry**.</li>
+                <li>🌞 Avoid **direct sunlight** exposure.</li>
+                <li>🍎 Eat a **healthy diet** to boost immunity.</li>
+                <li>🩺 Consult a **dermatologist** for treatment.</li>
+            </ul>
+        </div>
+
+        <div class="buttons">
+            <button onclick='window.location.href="/"'>🔄 Upload Another Image</button>
+            <button id="findDermatologistBtn">🔍 Find a Dermatologist</button>
+            <button id="diseaseBtn">💊 View Disease-Specific Medicines</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("findDermatologistBtn").addEventListener("click", function(){
+            window.open("https://www.google.com/search?q=dermatologist+near+me", "_blank");
+
+        });
+
+        document.getElementById("diseaseBtn").addEventListener("click", function(){
+            window.location.href = "{{ url_for('disease_info', disease=label) }}";
+        });
+    </script>
+
+</body>
+</html>

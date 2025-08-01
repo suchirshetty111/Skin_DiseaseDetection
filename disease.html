@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ disease_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/disease.css') }}"> 
+</head>
+<body>
+
+    <div class="container">
+        <h1>{{ disease_name }}</h1>
+
+        {% if info %}
+        <h2>Description</h2>
+        <p>{{ info.Description }}</p>
+
+        <h2>Symptoms</h2>
+        <p>{{ info.Symptoms }}</p>
+
+        <h2>Causes</h2>
+        <p>{{ info.Causes }}</p>
+
+        <h2>Prevention</h2>
+        <p>{{ info.Prevention }}</p>
+        {% endif %}
+
+        {% if medicines %}
+        <h2>Possible Medicines</h2>
+        <ul>
+            {% for medicine in medicines %}
+                <li>{{ medicine }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No medications found for this condition.</p>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}">Back to Home</a>
+
+    </div>
+
+</body>
+</html>

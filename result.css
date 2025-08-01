@@ -1,0 +1,126 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("../images/background.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 480px;
+    text-align: center;
+}
+
+/* Prediction Result */
+.result-box {
+    margin: 20px 0;
+}
+
+.predicted-disease {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4081;
+}
+
+/* Uploaded Image */
+.image-container {
+    margin: 20px 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("../images/background.jpg") no-repeat center center/cover;
+    min-height: 100vh;  /* Changed from height: 100vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding: 20px;  /* Added padding to prevent top cut-off */
+    overflow: auto;  /* Allows scrolling if needed */
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 30px;  /* Added margin to prevent top cut-off */
+}
+
+
+.uploaded-image {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Precautions */
+.precautions {
+    margin-top: 20px;
+}
+
+.precautions ul {
+    list-style: none;
+    padding: 0;
+}
+
+.precautions li {
+    font-size: 16px;
+    margin: 5px 0;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background: linear-gradient(45deg, #ff4081, #ff1744);
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.5);
+}
+
+.buttons button:hover {
+    background: linear-gradient(45deg, #ff1744, #ff4081);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 64, 129, 0.7);
+}

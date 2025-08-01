@@ -1,0 +1,130 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url("../images/background.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 480px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Upload Section */
+.upload-section {
+    margin: 20px 0;
+}
+
+input[type="file"] {
+    border: none;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    color: #fff;
+    outline: none;
+}
+
+input[type="file"]::file-selector-button {
+    background: #ff4081;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #ff1744;
+}
+
+/* Glowing Button */
+.glow-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #ff4081, #ff1744);
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.5);
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    width: 120px;  /* Adjust size */
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;  /* Center logo */
+}
+
+
+.glow-button:hover {
+    background: linear-gradient(45deg, #ff1744, #ff4081);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 64, 129, 0.7);
+}
+
+/* Dermatologist Search */
+.find-dermatologist {
+    margin-top: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    width: 60%;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
